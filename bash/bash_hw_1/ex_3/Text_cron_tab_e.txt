@@ -1,0 +1,6 @@
+#Здесь обе команды верхняя - для задачи 2, нижняя для задачи 3
+
+
+30 18 * * 5 /home/rvs/STUD/stud_bash/Scrept_cron.sh
+0 8 * * * /usr/sbin/logwatch --config-file /etc/logwatch/conf/logwatch.conf
+

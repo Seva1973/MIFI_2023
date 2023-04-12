@@ -1,0 +1,205 @@
+rvs@rvs-K73E:~$ sudo mail
+"/var/mail/root": 6 messages 4 new 2 unread
+ U   1 Anacron            Вт апр 11 0  19/651   Anacron job 'cron.daily' 
+ U   2 vs.ryzhov@gmail.co Вт апр 11 1 124/75493 Logwatch for rvs-K73E (Li
+>N   3 vsryzhov@gmail.com Вт апр 11 2 131/78419 Logwatch for rvs-K73E (Li
+ N   4 vsryzhov@gmail.com Вт апр 11 2 132/79033 Logwatch for rvs-K73E (Li
+ N   5 vsryzhov@gmail.com Вт апр 11 2 131/78466 Logwatch for rvs-K73E (Li
+ N   6 vsryzhov@gmail.com Вт апр 11 2 133/79490 Logwatch for rvs-K73E (Li
+? 1
+Return-Path: <root@rvs-K73E>
+X-Original-To: root
+Delivered-To: root@rvs-K73E
+Received: by rvs-K73E (Postfix, from userid 0)
+	id 435A280487; Tue, 11 Apr 2023 09:26:12 +0200 (CEST)
+From: Anacron <root@rvs-K73E>
+To: root@rvs-K73E
+Subject: Anacron job 'cron.daily' on rvs-K73E
+Content-Type: text/plain; charset=UTF-8
+Message-Id: <20230411072612.435A280487@rvs-K73E>
+Date: Tue, 11 Apr 2023 09:26:12 +0200 (CEST)
+X-IMAPbase: 1681218187                    3
+X-UID: 1
+Status: O
+
+/etc/cron.daily/00logwatch:
+Wrong configuration entry for "Service", if "All" selected, only "-" items are allowed
+run-parts: /etc/cron.daily/00logwatch exited with return code 2
+
+? 4
+Return-Path: <root@rvs-K73E>
+X-Original-To: root
+Delivered-To: root@rvs-K73E
+Received: by rvs-K73E (Postfix, from userid 0)
+	id 86D5F80013; Tue, 11 Apr 2023 20:34:46 +0200 (CEST)
+To: root@rvs-K73E
+From: vsryzhov@gmail.com
+Subject: Logwatch for rvs-K73E (Linux)
+Auto-Submitted: auto-generated
+Precedence: bulk
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset="UTF-8"
+Message-Id: <20230411183446.86D5F80013@rvs-K73E>
+Date: Tue, 11 Apr 2023 20:34:44 +0200 (CEST)
+
+ 
+ ################### Logwatch 7.5.6 (07/23/21) #################### 
+        Processing Initiated: Tue Apr 11 20:34:44 2023
+        Date Range Processed: today
+                              ( 2023-Apr-11 )
+                              Period is day.
+        Detail Level of Output: 5
+        Type of Output/Format: mail / text
+        Logfiles for Host: rvs-K73E
+ ################################################################## 
+ 
+ --------------------- System Configuration Begin ------------------------ 
+
+    Machine: x86_64
+    Release: Linux 5.15.0-69-generic
+ 
+ ---------------------- System Configuration End ------------------------- 
+
+ 
+ --------------------- clam-update Begin ------------------------ 
+
+ 
+ The following version(s) of the freshclam daemon were started
+    0.103.8 (OS: linux-gnu, ARCH: x86_64, CPU: x86_64): 1 Time(s)
+ 
+ The ClamAV update process was started 6 time(s)
+ 
+ Last ClamAV update process started at Tue Apr 11 20:19:39 2023
+ 
+ Last Status:
+    daily.cld database is up-to-date (version: 26872, sigs: 2029730, f-level: 90
+, builder: raynman)
+    main.cvd database is up-to-date (version: 62, sigs: 6647427, f-level: 90, bu
+ilder: sigmgr)
+    bytecode.cvd database is up-to-date (version: 334, sigs: 91, f-level: 90, bu
+ilder: anvilleg)
+ 
+ ---------------------- clam-update End ------------------------- 
+
+ 
+ --------------------- Cron Begin ------------------------ 
+
+ 
+ 
+ Commands Run:
+    User root:
+          cd / && run-parts --report /etc/cron.hourly: 5 Time(s)
+         [ -x /usr/lib/php/sessionclean ] && if [ ! -d /run/systemd/system ]; th
+en /usr/lib/php/sessionclean; fi: 11 Time(s)
+       [ -x /etc/init.d/anacron ] && if [ ! -d /run/systemd/system ]; then /usr/
+sbin/invoke-rc.d anacron start >/dev/null; fi: 8 Time(s)
+ 
+ ---------------------- Cron End ------------------------- 
+
+ 
+ --------------------- dpkg status changes Begin ------------------------ 
+
+ 
+ Installed:
+    blinken:amd64 4:21.12.3-0ubuntu1
+    dleyna-server:amd64 0.6.0-2build2
+    fbreader:amd64 0.12.10dfsg2-6
+    fonts-sjfonts:all 2.1-2
+    gir1.2-evince-3.0:amd64 42.3-0ubuntu3
+    gir1.2-gdesktopenums-3.0:amd64 42.0-1ubuntu1
+    gir1.2-gepub-0.6:amd64 0.6.0-2
+    gir1.2-gnomedesktop-3.0:amd64 42.5-0ubuntu1
+    gir1.2-lokdocview-0.1:amd64 1:7.3.7-0ubuntu0.22.04.2
+    gir1.2-tracker-3.0:amd64 3.3.0-1
+    gnome-books:amd64 40.0-3
+    gnome-online-miners:amd64 3.34.0-4
+    gnome-user-docs:all 41.5-1ubuntu2
+    grilo-plugins-0.3-base:amd64 0.3.14-1ubuntu2
+    grilo-plugins-0.3-extra:amd64 0.3.14-1ubuntu2
+    grilo-plugins-0.3:all 0.3.14-1ubuntu2
+    gsasl-common:all 1.10.0-5
+    guile-3.0-libs:amd64 3.0.7-1
+    libcue2:amd64 2.2.1-3build3
+    libdleyna-connector-dbus-1.0-1:amd64 0.3.0-2build1
+    libdleyna-core-1.0-5:amd64 0.6.0-5build1
+    libevdocument3-4:amd64 42.3-0ubuntu3
+    libevview3-3:amd64 42.3-0ubuntu3
+    libgepub-0.6-0:amd64 0.6.0-2
+    libgom-1.0-0:amd64 0.4-1build2
+    libgsasl7:amd64 1.10.0-5
+    libgupnp-av-1.0-3:amd64 0.14.0-3
+    libgupnp-dlna-2.0-4:amd64 0.12.0-3
+    libio-socket-inet6-perl:all 2.73-1
+    liblibreofficekitgtk:amd64 1:7.3.7-0ubuntu0.22.04.2
+    libmailutils8:amd64 1:3.14-1
+    libmediaart-2.0-0:amd64 1.9.5-2build1
+    libntlm0:amd64 1.6-4
+    liboauth0:amd64 1.0.3-5
+    libreofficekit-data:all 1:7.3.7-0ubuntu0.22.04.2
+    libsocket6-perl:amd64 0.29-1build4
+    libsynctex2:amd64 2021.20210626.59705-1build1
+    libtracker-sparql-3.0-0:amd64 3.3.0-1
+    libunibreak1:amd64 1.1-2.1
+    libzapojit-0.0-0:amd64 0.0.3-5
+    libzlcore-data:all 0.12.10dfsg2-6
+    libzlcore0.13:amd64 0.12.10dfsg2-6
+    libzltext-data:all 0.12.10dfsg2-6
+    libzltext0.13:amd64 0.12.10dfsg2-6
+    libzlui-gtk:amd64 0.12.10dfsg2-6
+    mailutils-common:all 1:3.14-1
+    mailutils:amd64 1:3.14-1
+    sendemail:all 1.56-5.1
+    ssh:all 1:8.9p1-3ubuntu0.1
+    tracker-extract:amd64 3.3.0-1
+    tracker-miner-fs:amd64 3.3.0-1
+    tracker:amd64 3.3.0-1
+    ubuntu-docs:all 22.04.5
+    unoconv:all 0.7-2ubuntu1
+    vsftpd:amd64 3.0.5-0ubuntu1
+    xorgxrdp:amd64 1:0.2.17-1build1
+    xrdp:amd64 0.9.17-2ubuntu2
+ 
+ Upgraded:
+    code:amd64 1.77.1-1680651665 => 1.77.2-1680777128
+    sudo:amd64 1.9.9-1ubuntu2.3 => 1.9.9-1ubuntu2.4
+ 
+ ---------------------- dpkg status changes End ------------------------- 
+
+ 
+ --------------------- HTTPD Errors Begin ------------------------ 
+
+ 
+ Level notice
+    notice code: AH00094:      1 Time(s)
+    notice code: AH00163:      1 Time(s) 
+ ---------------------- HTTPD Errors End ------------------------- 
+
+ 
+ --------------------- Kernel Begin ------------------------ 
+
+ 
+ WARNING:  Kernel Errors Present
+    acpi PNP0A08:00: _OSC: platform retains control of PCIe features (AE_ERROR) 
+...:  1 Time(s)
+ 
+ 1 Time(s): #3
+ 1 Time(s): ... bit width:              48
+ 1 Time(s): ... event mask:             000000070000000f
+ 1 Time(s): ... fixed-purpose events:   3
+ 1 Time(s): ... generic registers:      4
+ 1 Time(s): ... max period:             00007fffffffffff
+ 1 Time(s): ... value mask:             0000ffffffffffff
+ 1 Time(s): ... version:                3
+ 1 Time(s): .... node  #0, CPUs:        #1  #2
+ 1 Time(s): ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+ 1 Time(s): /init
+ 1 Time(s): ACPI FADT declares the system doesn't support PCIe ASPM, so disable 
+it
+ 1 Time(s): ACPI Warning: SystemIO range 0x0000000000000428-0x000000000000042F c
+onflicts with OpRegion 0x0000000000000400-0x000000000000044F (\GPIS) (20210730/u
+taddress-204)
+ 1 Time(s): ACPI Warning: SystemIO range 0x0000000000000428-0x000000000000042F c
+? 4
+
+

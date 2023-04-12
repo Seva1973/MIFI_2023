@@ -1,0 +1,138 @@
+Начало выполнения скрипта
+Репозиторий Backports уже добавлен
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Сущ:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Сущ:3 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Игн:4 https://download.docker.com/linux/ubuntu vera InRelease
+Сущ:5 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Ошб:6 https://download.docker.com/linux/ubuntu vera Release
+  404  Not Found [IP: 13.32.121.111 443]
+Сущ:8 http://packages.microsoft.com/repos/code stable InRelease
+Игн:7 http://mirrors.edge.kernel.org/ubuntu 21.1-backports InRelease
+Сущ:9 https://brave-browser-apt-release.s3.brave.com stable InRelease
+Игн:10 http://packages.linuxmint.com vera InRelease
+Ошб:11 http://mirrors.edge.kernel.org/ubuntu 21.1-backports Release
+  404  Not Found [IP: 147.75.80.249 80]
+Сущ:12 http://packages.linuxmint.com vera Release
+Чтение списков пакетов…
+E: Репозиторий «https://download.docker.com/linux/ubuntu vera Release» не содержит файла Release.
+E: Репозиторий «http://mirrors.kernel.org/ubuntu 21.1-backports Release» не содержит файла Release.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+Расчёт обновлений…
+Следующие пакеты будут оставлены в неизменном виде:
+  grub-efi-amd64-bin grub-efi-amd64-signed shim-signed
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+Уже установлен пакет apache2 самой новой версии (2.4.52-1ubuntu4.4).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+Уже установлен пакет python3 самой новой версии (3.10.6-1~22.04).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+Уже установлен пакет openssh-server самой новой версии (1:8.9p1-3ubuntu0.1).
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+Synchronizing state of ssh.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable ssh
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Сущ:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Сущ:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Сущ:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Игн:5 https://download.docker.com/linux/ubuntu vera InRelease
+Ошб:7 https://download.docker.com/linux/ubuntu vera Release
+  404  Not Found [IP: 13.32.121.29 443]
+Сущ:8 http://packages.microsoft.com/repos/code stable InRelease
+Игн:6 http://mirrors.edge.kernel.org/ubuntu 21.1-backports InRelease
+Сущ:9 https://brave-browser-apt-release.s3.brave.com stable InRelease
+Игн:10 http://packages.linuxmint.com vera InRelease
+Ошб:11 http://mirrors.edge.kernel.org/ubuntu 21.1-backports Release
+  404  Not Found [IP: 147.75.80.249 80]
+Сущ:12 http://packages.linuxmint.com vera Release
+Чтение списков пакетов…
+E: Репозиторий «https://download.docker.com/linux/ubuntu vera Release» не содержит файла Release.
+E: Репозиторий «http://mirrors.kernel.org/ubuntu 21.1-backports Release» не содержит файла Release.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+Расчёт обновлений…
+Следующие пакеты будут оставлены в неизменном виде:
+  grub-efi-amd64-bin grub-efi-amd64-signed shim-signed
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Чтение списков пакетов…
+Построение дерева зависимостей…
+Чтение информации о состоянии…
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 3 пакетов не обновлено.
+useradd: пользователь «rvs2» уже существует
+Новый пароль: 
+Повторите ввод нового пароля: 
+passwd: пароль успешно обновлён
+Пользователь rvs2 был успешно создан
+Директория /home/rvs2/stud_bash не сущетсвует! Исправь скрипт
+tar: Удаляется начальный `/' из имен объектов
+/home/rvs2/
+/home/rvs2/.config/
+/home/rvs2/.config/hexchat/
+/home/rvs2/.config/hexchat/servlist.conf
+/home/rvs2/.config/hexchat/hexchat.conf
+/home/rvs2/.config/caja/
+/home/rvs2/.config/caja/desktop-metadata
+/home/rvs2/.config/qt5ct/
+/home/rvs2/.config/qt5ct/qt5ct.conf
+/home/rvs2/stud_bash/
+/home/rvs2/stud_bash/primer/
+/home/rvs2/stud_bash/primer/дз_9_1.txt
+/home/rvs2/stud_bash/primer/дз_9_2.txt
+/home/rvs2/stud_bash/primer/дз_9.txt
+/home/rvs2/stud_bash/distro_version.txt
+/home/rvs2/stud_bash/.Scrept_10.sh.swp
+/home/rvs2/stud_bash/backup_2023-04-10_10-49-04.tar.gz
+/home/rvs2/stud_bash/backup_2023-04-10_11-06-42.tar.gz
+/home/rvs2/stud_bash/backup_2023-04-10_12-31-27.tar.gz
+/home/rvs2/stud_bash/log.txt
+/home/rvs2/stud_bash/Scrept_10.sh
+/home/rvs2/stud_bash/Scrept_cron.sh
+/home/rvs2/stud_bash/Результат копирования и архивирования в RVS2.png
+/home/rvs2/.gtkrc-2.0
+/home/rvs2/.bashrc
+/home/rvs2/.gtkrc-xfce
+/home/rvs2/.profile
+/home/rvs2/.bash_logout
+Файл /home/rvs/STUD/stud_bash/log.txt существует.
+Дата изменения файла: 2023-04-10 13:10:35.606145931 +0200
+Конец выполнения скрипта
