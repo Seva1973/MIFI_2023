@@ -1,0 +1,2 @@
+[ryzhov]
+10.0.0.10 ansible_ssh_user=linuxlite ansible_become_password=qw098zx
