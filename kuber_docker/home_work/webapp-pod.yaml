@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: php-apache-pod
+spec:
+  containers:
+    - name: php-apache-container
+      image: php:7.4-apache
+      ports:
+        - containerPort: 80
