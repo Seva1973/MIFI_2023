@@ -1,0 +1,24 @@
+rvs@rvs-k73e:~/STUD/docker_kuber/home_work$ kubectl get all -o wide
+NAME                                         READY   STATUS             RESTARTS      AGE     IP            NODE       NOMINATED NODE   READINESS GATES
+pod/mysql-deployment-6fc84cf946-24dsx        1/1     Running            9 (11h ago)   4d22h   10.244.0.92   minikube   <none>           <none>
+pod/php-apache-deployment-7978fffddf-htgv6   0/1     ImagePullBackOff   0             22h     10.244.0.95   minikube   <none>           <none>
+pod/php-apache-pod                           1/1     Running            1 (40m ago)   22h     10.244.0.89   minikube   <none>           <none>
+pod/webapp-deployment-5659ffc566-qpzl2       1/1     Running            1 (40m ago)   12h     10.244.0.91   minikube   <none>           <none>
+
+NAME                     TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE     SELECTOR
+service/kubernetes       ClusterIP   10.96.0.1      <none>        443/TCP        5d18h   <none>
+service/mysql-service    ClusterIP   10.98.45.84    <none>        3306/TCP       5d17h   app=mysql
+service/webapp-service   NodePort    10.102.69.36   <none>        80:31163/TCP   5d17h   app=webapp
+
+NAME                                    READY   UP-TO-DATE   AVAILABLE   AGE     CONTAINERS             IMAGES                SELECTOR
+deployment.apps/mysql-deployment        1/1     1            1           5d17h   mysql-container        mysql:5.7             app=mysql
+deployment.apps/php-apache-deployment   0/1     1            0           22h     php-apache-container   my-php-apache-image   app=php-apache
+deployment.apps/webapp-deployment       1/1     1            1           13h     webapp-container       php:7.4-apache        app=webapp
+
+NAME                                               DESIRED   CURRENT   READY   AGE     CONTAINERS             IMAGES                SELECTOR
+replicaset.apps/mysql-deployment-6d887db468        0         0         0       5d17h   mysql-container        mysql:8.0             app=mysql,pod-template-hash=6d887db468
+replicaset.apps/mysql-deployment-6fc84cf946        1         1         1       4d22h   mysql-container        mysql:5.7             app=mysql,pod-template-hash=6fc84cf946
+replicaset.apps/php-apache-deployment-7978fffddf   1         1         0       22h     php-apache-container   my-php-apache-image   app=php-apache,pod-template-hash=7978fffddf
+replicaset.apps/webapp-deployment-5659ffc566       1         1         1       12h     webapp-container       php:7.4-apache        app=webapp,pod-template-hash=5659ffc566
+replicaset.apps/webapp-deployment-787d684fd4       0         0         0       13h     webapp-container       php:7.4-apache        app=webapp,pod-template-hash=787d684fd4
+replicaset.apps/webapp-deployment-854b8897c8       0         0         0       12h     webapp-container       php:7.4-apache        app=webapp,pod-template-hash=854b8897c8
