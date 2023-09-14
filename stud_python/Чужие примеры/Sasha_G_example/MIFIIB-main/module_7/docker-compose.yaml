@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  pyapp_scanner:
+    container_name: pyapp_scanner
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "3009:3009"
+
+

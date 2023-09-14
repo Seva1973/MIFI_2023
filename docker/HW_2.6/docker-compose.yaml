@@ -1,0 +1,35 @@
+version: '3.0'
+services:
+  serverapphp: 
+    image: 'ryzhov' 
+    container_name: ryzhov2
+    ports: 
+      - '8888:80'
+    volumes:
+      - './src:/var/www/html' 
+    depends_on: 
+      - database   
+  database: 
+    image: 'mysql:5.7'
+    container_name: database
+    command: '--init-file /data/application/init.sql' 
+    environment:
+      MYSQL_ROOT_PASSWORD: admin 
+    volumes: 
+      - './dbfile:/var/lib/mysql'
+      - './init.sql:/data/application/init.sql'
+    ports:
+      - '3308:3306' 
+    restart: always
+  mySQLclient:
+    image: mysqlclient3
+    container_name: mySQLclient
+    environment:
+      MYSQL_ROOT_PASSWORD: v2000
+    volumes:
+      - './dbfile:/var/lib/mysql'
+    tty: true
+    depends_on:
+      - database
+
+

@@ -1,0 +1,5 @@
+my_tuple = (1, "February", 2023)
+print("My tuple, example:", my_tuple)
+print(my_tuple[0])
+print(my_tuple[1])
+print(my_tuple[2])

@@ -1,0 +1,68 @@
+Настройте автоматическую отправку по почте логов изученных сервисов: SSH, FTP, RDP. 
+
+УСЛОВИЯ РЕАЛИЗАЦИИ
+Используйте утилиту Logwatch и планировщик задач cron. 
+Письмо должно отправляться каждый день в 8:00. 
+Уровень детализации — на ваше усмотрение.
+В качестве ответа приложите:
+
+Текст задачи в cron.
+Команду для утилиты Logwatch (в отдельном текстовом файле).
+Скриншот полученного письма.
+Для настройки автоматической отправки логов изученных сервисов через почту вам нужно выполнить следующие шаги:
+
+Установите утилиту Logwatch, если она еще не установлена на вашей системе. На большинстве дистрибутивов Linux вы можете установить ее с помощью менеджера пакетов, например, для Ubuntu используйте команду:
+sql
+Copy code
+sudo apt-get update && sudo apt-get install logwatch
+Создайте файл конфигурации для Logwatch, в котором вы указываете, какие логи нужно мониторить и какой уровень детализации нужен. Создайте файл /etc/logwatch/conf/logwatch.conf и добавьте следующие строки:
+makefile
+Copy code
+# Set the default level of detail for the reports
+Detail = High
+
+# Monitor the SSH log file
+LogFile = /var/log/auth.log
+
+# Monitor the FTP log file
+LogFile = /var/log/vsftpd.log
+
+# Monitor the RDP log file
+LogFile = /var/log/xrdp.log
+
+Настройте отправку почты через SMTP. Для этого вы можете использовать любой почтовый сервер, который поддерживает SMTP-протокол. Например, для отправки через Gmail вы можете использовать следующий конфигурационный файл /etc/ssmtp/ssmtp.conf:
+makefile
+Copy code
+root=my.email@gmail.com
+mailhub=smtp.gmail.com:587
+AuthUser=my.email@gmail.com
+AuthPass=my-password
+UseSTARTTLS=YES
+Настройте задание в cron для ежедневной отправки логов по почте в 8:00. Откройте файл /etc/crontab и добавьте следующую строку:
+css
+Copy code
+0 8 * * * root /usr/sbin/logwatch --output mail --mailto my.email@gmail.com --detail High
+Эта команда запускает утилиту Logwatch каждый день в 8:00, генерирует отчет с высоким уровнем детализации и отправляет его на указанный адрес электронной почты.
+
+После того, как вы настроили все параметры, вы можете протестировать отправку почты, запустив задание вручную:
+css
+Copy code
+sudo /usr/sbin/logwatch --output mail --mailto my.email@gmail.com --detail High
+Проверьте, что вы получили отчет по электронной почте. Ниже пример полученного письма.
+yaml
+Copy code
+From: root@myserver.com
+To: my.email@gmail.com
+Subject: Logwatch for myserver.com (Linux)
+
+################### Logwatch 7.5.2 (05/05/21) #################### 
+        Processing Initiated: Mon Apr 10 08:00:00 2023
+        Date Range Processed: yesterday
+                              ( 2023-Apr-09 )
+                              Period is day.
+      Detail Level of Output: High
+              Type of Output: mail
+           Logfiles for Host: myserver
+
+
+

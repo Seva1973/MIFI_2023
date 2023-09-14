@@ -1,0 +1,109 @@
+*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.3.1                                              *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+*******************************************************************
+
+[*] Target: mephi.ru 
+
+	Searching 0 results.
+[94m[*] Searching Bing. 
+
+[*] No IPs found.
+
+[*] Emails found: 3
+----------------------
+avkhromov@mephi.ru
+ovbulekov@mephi.ru
+smpolozov@mephi.ru
+
+[*] Hosts found: 24
+---------------------
+admission.mephi.ru
+biti.mephi.ru
+campus.mephi.ru
+campuswebauth.mephi.ru
+eng.mephi.ru
+goit.mephi.ru
+home.mephi.ru
+indico.particle.mephi.ru
+inphe.mephi.ru
+inter.mephi.ru
+it.mephi.ru
+kaf70.mephi.ru
+library.mephi.ru
+online.mephi.ru
+open.mephi.ru
+org.mephi.ru
+physbio-conf.mephi.ru
+plasma.mephi.ru
+priority2030.mephi.ru
+readme.campus.mephi.ru
+sno.mephi.ru
+voip.mephi.ru
+volga.mephi.ru
+wifi.mephi.ru
+*******************************************************************
+*  _   _                                            _             *
+* | |_| |__   ___    /\  /\__ _ _ ____   _____  ___| |_ ___ _ __  *
+* | __|  _ \ / _ \  / /_/ / _` | '__\ \ / / _ \/ __| __/ _ \ '__| *
+* | |_| | | |  __/ / __  / (_| | |   \ V /  __/\__ \ ||  __/ |    *
+*  \__|_| |_|\___| \/ /_/ \__,_|_|    \_/ \___||___/\__\___|_|    *
+*                                                                 *
+* theHarvester 4.3.1                                              *
+* Coded by Christian Martorella                                   *
+* Edge-Security Research                                          *
+* cmartorella@edge-security.com                                   *
+*                                                                 *
+*******************************************************************
+
+[*] Target: mephi.ru 
+
+[94m[*] Searching Yahoo. 
+
+[*] No IPs found.
+
+[*] Emails found: 7
+----------------------
+aakotlyarov@mephi.ru
+avantsibor@mephi.ru
+mnstrikhanov@mephi.ru
+ogchugunova@mephi.ru
+olympiad@mephi.ru
+onpetukhova@mephi.ru
+ovlikhacheva@mephi.ru
+
+[*] Hosts found: 24
+---------------------
+admission.mephi.ru
+auth.mephi.ru
+biti.mephi.ru
+campus.mephi.ru
+eis2.mephi.ru
+eng.mephi.ru
+home.mephi.ru
+indico.particle.mephi.ru
+inter.mephi.ru
+irc.campus.mephi.ru
+is.mephi.ru
+jabber.campus.mephi.ru
+library.mephi.ru
+login.mephi.ru
+olymp.mephi.ru
+online.mephi.ru
+open.mephi.ru
+org.mephi.ru
+orgnew.mephi.ru
+pdf.mephi.ru
+porteai.mephi.ru
+readme.campus.mephi.ru
+sno.mephi.ru
+volga.mephi.ru

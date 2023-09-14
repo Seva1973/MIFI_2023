@@ -1,0 +1,3 @@
+This MIFIIB subfolder of MIFIIB one is the Git clone, the only way I could properly setup and sync
+my project between Git and GitHub.
+Other systems (Kali VM) will be connected to MIFIIB main remote repository on GitHub.

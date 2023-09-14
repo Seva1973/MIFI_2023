@@ -1,0 +1,10 @@
+CREATE TABLE reg_1 (
+  reg_name varchar(255) NOT NULL,
+  main_city varchar(255) NOT NULL) 
+  ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO reg_1 (reg_name, main_city) 
+VALUES
+('Prim kraj', 'Vladivostok'),
+('Khab kraj', 'Khabarovsk'),
+('Amur obl', 'Blagovestchensk');

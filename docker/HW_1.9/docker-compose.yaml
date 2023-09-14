@@ -1,0 +1,24 @@
+version: '3.0'
+services:
+    database: 
+        image: 'mysql:5.7'
+        container_name: database
+        command: '--init-file /data/application/init.sql' 
+        environment:
+            MYSQL_ROOT_PASSWORD: admin 
+        volumes: 
+            - './dbfile:/var/lib/mysql'
+            - './init.sql:/data/application/init.sql'
+        ports:
+            - '3308:3306' 
+        restart: always
+    serverapach: 
+        image: 'ryzhov' 
+        container_name: ryzhov2 
+        ports: 
+            - '8888:80'
+        volumes:
+            - './src:/var/www/html' 
+        depends_on: 
+            - database
+

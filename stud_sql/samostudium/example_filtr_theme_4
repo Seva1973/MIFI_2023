@@ -1,0 +1,104 @@
+'''
+1) В следующем запросе используются два условия равенства : 
+одно в предложении on ( условие соединения ), а второе
+в предложении where ( условие фильтрации ):
+код выполняет выборку из таблицы customer и rental, используя операцию INNER JOIN для объединения строк на основе условия, 
+что customer_id в таблице customer равен customer_id в таблице rental. Далее, фильтруются только те строки, 
+где rental_date в таблице rental равен "2005-06-14".
+
+
+'''
+
+SELECT c.email
+FROM customer c
+INNER JOIN rental r
+ON c.customer_id = r.customer_id
+WHERE date(r.rental_date) = '2005-06-14';
+
+'''
+2) удалить те строки из таблицы rental , 
+в которых дата аренды соответствует 2004 году. Вот один из способов решить эту проблему :
+'''
+
+DELETE FROM rental WHERE year (rental_date) = 2004;
+
+'''
+3) пример , в котором используются два условия неравенства для удаления любых строк , срок аренды которых не соответствует ни 2005, ни 2006 году :
+'''
+DELETE FROM rental
+WHERE year (rental_date) <> 2005 
+AND year(rental_date) <> 2006;
+
+'''
+4) Диапазон
+При использовании оператора between следует помнить о нескольких вещах . Всегда необходимо указывать сначала нижнюю границу диапазона ( после between ) и верхнюю границу ( после and)
+'''
+
+SELECT customer_id , rental_date
+FROM rental
+WHERE rental_date BETWEEN '2005-06-14' AND '2005-06-16';
+
+'''
+5) Числовые диапазоны
+'''
+
+SELECT customer_id , payment_date , amount
+FROM payment
+WHERE amount BETWEEN 10.0 AND 11.99;
+
+'''
+6)Строковые диапазоны 
+Вот запрос , который возвращает клиентов , 
+фамилии которых находятся между FA и FR:
+'''
+
+SELECT last_name, first_name
+FROM customer
+WHERE last_name BETWEEN 'FA' AND 'FR';
+
+'''
+7) Фильтрация с пом. регулярных выражений
+
+'''
+
+SELECT last_name, first_name
+FROM customer
+WHERE last_name REGEXP '^[QY]';
+
+'''
+УПРАЖНЕНИЕ 4.1
+Какие из идентификаторов платежей будут возвращены при следующих
+условиях фильтрации ?
+ИСП. ТАБЛИЦУ payment
+_
+customer_id <> 5
+AND ( amount > 8 OR date(payment date) = '2005-08-23' )
+'''
+
+'''
+УПРАЖНЕНИЕ 4.3
+Создайте запрос , который извлекает из таблицы payments все строки ,
+в которых сумма равна 1.98 , 7.8 или 9.98 .
+Это столбец 'amount'
+
+'''
+
+SELECT amount
+FROM payment
+WHERE amount REGEXP '[1, 7, 9].98';
+
+'''
+
+УПРАЖНЕНИЕ 4.4
+Создайте запрос , который находит всех клиентов , в фамилиях которых содержатся буква А во второй позиции и буква W в любом месте после А .
+это надо брать таблицу customer , столбец last_name
+
+'''
+
+SELECT last_name
+FROM customer
+WHERE last_name LIKE '_A%W%';
+
+
+
+

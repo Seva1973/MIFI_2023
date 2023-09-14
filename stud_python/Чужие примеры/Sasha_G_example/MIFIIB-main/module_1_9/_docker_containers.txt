@@ -1,0 +1,2 @@
+This folder contains the data of my first GitHub project from the MIFIIB course.
+In this module we learned to create the Docker containers from images, init.sql and PHP files.

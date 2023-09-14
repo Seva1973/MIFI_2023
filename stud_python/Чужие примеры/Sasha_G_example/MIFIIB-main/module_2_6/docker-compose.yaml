@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  db26:
+    image: 'mysql:5.7'
+    container_name: db26
+    command: '--init-file /data/application/init.sql'
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: instruments
+    volumes:
+      - './dbfile:/var/lib/mysql'
+      - './init.sql:/data/application/init.sql'
+    ports:
+      - '3308:3306'
+    restart: 'always'
+  php-apache-server:
+    image: 'ganitev2:latest'
+    container_name: php-apache-m26
+    ports:
+      - '8080:80'
+    volumes:
+      - './php:/var/www/html'
+    depends_on:
+      - db26
+  mysqlclient_ag:
+    image: 'mysqlclient_ag:latest'
+    container_name: mysqlclient_ag
+    volumes:
+      - './dbfile:/var/lib/mysql'
+    tty: true
+    depends_on:
+      - db26
+
+

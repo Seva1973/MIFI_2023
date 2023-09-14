@@ -1,0 +1,22 @@
+rules:
+  - id: python-dangerous-function
+    languages: [python]
+    patterns:
+      - pattern: "eval($EXPR)"
+    message: "Avoid using eval() in Python scripts"
+    severity: WARNING
+  
+  - id: js-dangerous-function
+    languages: [javascript]
+    patterns:
+      - pattern: "eval($EXPR)"
+    message: "Avoid using eval() in JavaScript scripts"
+    severity: WARNING
+
+  - id: php-dangerous-function
+    languages: [php]
+    patterns:
+      - pattern: "eval($EXPR)"
+    message: "Avoid using eval() in PHP scripts"
+    severity: WARNING
+

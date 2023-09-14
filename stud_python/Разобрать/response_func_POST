@@ -1,0 +1,4 @@
+import requests
+
+response = request.get("http://info.cern.ch/")
+print (f"Код ответа сервера: {response.status_code}")

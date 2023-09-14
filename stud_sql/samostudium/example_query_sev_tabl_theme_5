@@ -1,0 +1,36 @@
+
+'''
+1) Декартово произведение. Выводит все возможные комбинации 
+Запроса , который извлекает имена и фамилии клиентов вместе с почтовым адресом , 
+с предложением from, указывающим обе таблицы , разделенные ключевым словом JOIN:
+'''
+
+SELECT c.first_name , c.last_name , a.address
+FROM customer c JOIN address a;
+
+'''
+2) Чтобы изменить предыдущий запрос так, чтобы для каждого клиента возвращалась только одна строка , нужно правильно описать , как именно связаны эти две таблицы
+'''
+SELECT c.first_name , c.last_name , a.address
+FROM customer c JOIN address a;
+ON c.address_id = a.address_id;
+
+'''
+правильнее указывать INNER JOIN - УКАЗЫВАТЬ НА ВНУТРЕННЕЕ СОЕДИНЕНИЕ
+ а если имена столбцов идентичны, то можно вместо 'ON c.address_id = a.address_id' указать 'USING (address_id)' - и программа будет выбирать именно эти столбцы из таблиц;
+
+'''
+
+SELECT c.first_name , c.last_name , a.address
+FROM customer c INNER JOIN address a
+ON c.address_id = a.address_id;
+
+'''
+3) Соединение трех таблиц.
+'''
+SELECT c.first_name , c.last_name, ct.city
+FROM customer c
+INNER JOIN address a
+ON c.address_id = a.address_id
+INNER JOIN city ct
+ON a.city_id = ct.city_id;

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Определение дистрибутива и версии
+distro=$(lsb_release -i | awk '{print $3}')
+version=$(lsb_release -r | awk '{print $2}')
+
+echo "Вы используете $distro $version"
+
+# Проверка наличия репозитория Backports
+if grep -q "backports" /etc/apt/sources.list; then
+    echo "Репозиторий Backports уже добавлен"
+else
+    # Добавление репозитория Backports
+    echo "Добавление репозитория Backports"
+    echo "deb http://mirrors.kernel.org/ubuntu/ ${version}-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list
+fi
+
+# Обновление списка репозиториев
+sudo apt update
+
+##!/bin/bash - эта строка означает, что скрипт должен быть выполнен с помощью интерпретатора bash.
+
+distro=$(lsb_release -i | awk '{print $3}') - это команда определяет дистрибутив Linux, который используется на компьютере. Она использует утилиту lsb_release, которая выводит информацию о дистрибутиве. Команда awk используется для того, чтобы извлечь третье слово из вывода команды lsb_release.
+
+version=$(lsb_release -r | awk '{print $2}') - эта команда определяет версию дистрибутива Linux, которая используется на компьютере. Она также использует утилиту lsb_release и команду awk, чтобы извлечь второе слово из вывода команды lsb_release.
+
+echo "Вы используете $distro $version" - этот шаг просто выводит сообщение в терминале, оповещая пользователя о дистрибутиве и версии операционной системы.
+
+if grep -q "backports" /etc/apt/sources.list; then - это условие проверяет, есть ли репозиторий Backports в списке репозиториев. Он использует команду grep, чтобы найти строку "backports" в файле /etc/apt/sources.list.
+
+echo "Репозиторий Backports уже добавлен" - если репозиторий уже существует в списке репозиториев, то скрипт просто выводит сообщение в терминале.
+
+echo "Добавление репозитория Backports" - если репозитория Backports еще нет в списке репозиториев, скрипт выводит сообщение, чтобы пользователь знал, что скрипт выполняет.
+
+echo "deb http://mirrors.kernel.org/ubuntu/ ${version}-backports main restricted universe multiverse" | sudo tee -a /etc/apt/sources.list - этот шаг добавляет репозиторий Backports в файл /etc/apt/sources.list. Он использует команду tee с опцией -a, чтобы добавить новую строку в файл, а также использует sudo, чтобы получить права суперпользователя для изменения файла.
+
+sudo apt update - это команда обновляет список репозиториев, чтобы включить новый репозиторий Backports.
+
+Это основные шаги скрипта. Надеюсь, это помогает!
